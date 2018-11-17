@@ -1,0 +1,1139 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
+<style>
+body {
+    background-image: url("images.jpg");
+    background-size: cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 40px;
+    border-width:10px;
+    border-color: black; 
+    border-style: solid;
+}
+.hgg{
+	background-color: #3a9ecb;
+	text-align: center;
+}
+.input{
+	margin-left: 30px;
+	margin-right: 30px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-size: 20px;
+}
+#gt{
+	margin: 3px 0;
+}
+h2{
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 30px;
+}
+#verbo {
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+    margin: 0px 0;
+    font-size: 25px;
+    /*font-weight: bold;
+    text-align: center;*/
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /*font-family: 'Shadows Into Light', cursive;*/
+}
+#tab {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 450px;
+    background-color: white;
+    opacity: 0.95;
+    border-radius: 10px 10px 10px 10px;
+    border-width:10px;
+    border-color: black;
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:8px;
+    -moz-border-radius:8px; 
+    height: 300px;
+    width: 500px;
+    
+}
+
+
+    
+}
+#tab td, #tab th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tab tr:nth-child(even){background-color: #f2f2f2;}
+
+#tab tr:hover {background-color: #ddd;}
+
+#tab th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #3a9ecb;
+    color: white;
+}
+h1 {
+	margin-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Bubblegum Sans', cursive;
+  /*font-family: "BenchNine", sans-serif;*/
+  font-size: 50px;
+  color: black;
+}	
+  button{
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #3a9ecb;
+  border: 0;
+  padding: 6px;
+  margin-top: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  width: 41%;
+}
+
+/*
+#table {
+	background-color: white;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 30%;
+}
+
+#table td, #table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#table tr:nth-child(even){background-color: #f2f2f2;}
+
+#table tr:hover {background-color: #ddd;}
+
+#table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}*/
+</style>
+	<script type="text/javascript">
+		function conj() {
+		var ver=document.getElementById('verbo').value;
+		var ver = ver.toLowerCase();
+		var len = ver.length;
+		var stem=ver.slice(0,len-2);
+		var type=ver.slice(-2);
+
+if(ver=="ser")
+	{var mean="to be (inherent characteristic)";}
+else if(ver=="haber")
+	{var mean="to have (auxiliary)";}
+else if(ver=="estar")
+	{var mean="to be (state or condition)";}
+else if(ver=="tener")
+	{var mean="to have, to possess";}
+else if(ver=="hacer")
+	{var mean="to make, to do";}
+else if(ver=="poder")
+	{var mean="to be able to, can";}
+else if(ver=="decir")
+	{var mean="to say, to tell";}
+else if(ver=="ir")
+	{var mean="to go";}
+else if(ver=="ver")
+	{var mean="to see";}
+else if(ver=="dar")
+	{var mean="to give";}
+else if(ver=="saber")
+	{var mean="to know a fact, how to do something";}
+else if(ver=="querer")
+	{var mean="to wish, to want, to love";}
+else if(ver=="llegar")
+	{var mean="to arrive";}
+else if(ver=="pasar")
+	{var mean="to pass, to spend";}
+else if(ver=="deber")
+	{var mean="to should, to ought, to owe";}
+else if(ver=="poner")
+	{var mean="to put, to place";}
+else if(ver=="parecer")
+	{var mean="to seem, to look like";}
+else if(ver=="quedar")
+	{var mean="to remain, to stay";}
+else if(ver=="creer")
+	{var mean="to believe, to think ";}
+else if(ver=="hablar")
+	{var mean="to speak, to talk";}
+else if(ver=="llevar")
+	{var mean="to take, to carry, to wear";}
+else if(ver=="dejar")
+	{var mean="to let, to allow, to leave, to leave behind";}
+else if(ver=="seguir")
+	{var mean="to follow, to continue";}
+else if(ver=="encontrar")
+	{var mean="to find, to enounter";}
+else if(ver=="llamar")
+	{var mean="to call, to call oneself";}
+else if(ver=="venir")
+	{var mean="to come";}
+else if(ver=="pensar")
+	{var mean="to think, to plan";}
+else if(ver=="salir")
+	{var mean="to leave, to go out";}
+else if(ver=="volver")
+	{var mean="to return; to do something again)";}
+else if(ver=="tomar")
+	{var mean="to take, to injest, to drink";}
+else if(ver=="bailar")
+	{var mean="to dance";}
+else if(ver=="conocer")
+	{var mean="to be familiar with";}
+else if(ver=="vivir")
+	{var mean="to live";}
+else if(ver=="sentir")
+	{var mean="to feel";}
+else if(ver=="tratar")
+	{var mean="to try, to treat, to deal with";}
+else if(ver=="mirar")
+	{var mean="to look, to watch";}
+else if(ver=="contar")
+	{var mean="to count, to tell";}
+else if(ver=="empezar")
+	{var mean="to begin, to start";}
+else if(ver=="esperar")
+	{var mean="to wait, to hope";}
+else if(ver=="buscar")
+	{var mean="to look *for*";}
+else if(ver=="existir")
+	{var mean="to exist";}
+else if(ver=="entrar")
+	{var mean="to enter";}
+else if(ver=="trabajar")
+	{var mean="to work";}
+else if(ver=="escribir")
+	{var mean="to write";}
+else if(ver=="perder")
+	{var mean="to lose, to miss";}
+else if(ver=="producir")
+	{var mean="to produce, to cause";}
+else if(ver=="ocurrir")
+	{var mean="to happen, to occur";}
+else if(ver=="entender")
+	{var mean="to understand";}
+else if(ver=="pedir")
+	{var mean="to ask for";}
+else if(ver=="recibir")
+	{var mean="to receive";}
+else if(ver=="recordar")
+	{var mean="to remember to remind";}
+else if(ver=="terminar")
+	{var mean="to end, to finish, to terminate";}
+else if(ver=="permitir")
+	{var mean="to allow, to permit";}
+else if(ver=="aparecer")
+	{var mean="to appear";}
+else if(ver=="conseguir")
+	{var mean="to get, to obtain, to acquire";}
+else if(ver=="comenzar")
+	{var mean="to start, to commence";}
+else if(ver=="servir")
+	{var mean="to serve";}
+else if(ver=="sacar")
+	{var mean="to take out";}
+else if(ver=="necesitar")
+	{var mean="to need";}
+else if(ver=="mantener")
+	{var mean="to maintain, to keep";}
+else if(ver=="resultar")
+	{var mean="to turn out, to result";}
+else if(ver=="leer")
+	{var mean="to read";}
+else if(ver=="caer")
+	{var mean="to fall";}
+else if(ver=="cambiar")
+	{var mean="to change";}
+else if(ver=="cantar")
+	{var mean="to sing";}
+else if(ver=="caminar")
+	{var mean="to walk";}
+else if(ver=="presentar")
+	{var mean="to introduce, to present";}
+else if(ver=="viajar")
+	{var mean="to travel";}
+else if(ver=="crear")
+	{var mean="to create";}
+else if(ver=="abrir")
+	{var mean="to open";}
+else if(ver=="considerar")
+	{var mean="to consider";}
+else if(ver=="oir")
+	{var mean="to hear";}
+else if(ver=="acabar")
+	{var mean="to end, to finish; to have just";}
+else if(ver=="convertir")
+	{var mean="to convert, to change, to become";}
+else if(ver=="ganar")
+	{var mean="to win, to earn";}
+else if(ver=="formar")
+	{var mean="to form";}
+else if(ver=="traer")
+	{var mean="to bring, to carry";}
+else if(ver=="partir")
+	{var mean="to divide, to leave, henceforward";}
+else if(ver=="morir")
+	{var mean="to die";}
+else if(ver=="aceptar")
+	{var mean="to accept";}
+else if(ver=="realizar")
+	{var mean="to fulfill, to bring to fruition, to carry out";}
+else if(ver=="suponer")
+	{var mean="to suppose, to assume";}
+else if(ver=="comprender")
+	{var mean="to understand, to comprehend";}
+else if(ver=="lograr")
+	{var mean="to manage to achieve";}
+else if(ver=="explicar")
+	{var mean="to explain";}
+else if(ver=="preguntar")
+	{var mean="to ask";}
+else if(ver=="tocar")
+	{var mean="to touch, to play";}
+else if(ver=="reconocer")
+	{var mean="to recognize, to admit";}
+else if(ver=="estudiar")
+	{var mean="to study";}
+else if(ver=="alcanzar")
+	{var mean="to reach, overtake, catch up to";}
+else if(ver=="nacer")
+	{var mean="to be born";}
+else if(ver=="dirigir")
+	{var mean="to direct, to manage";}
+else if(ver=="correr")
+	{var mean="to run";}
+else if(ver=="utilizar")
+	{var mean="to use, to utilize";}
+else if(ver=="pagar")
+	{var mean="to pay";}
+else if(ver=="ayudar")
+	{var mean="to help";}
+else if(ver=="gustar")
+	{var mean="to be pleasing to";}
+else if(ver=="jugar")
+	{var mean="to play a sport, or game";}
+else if(ver=="escuchar")
+	{var mean="to listen to";}
+else if(ver=="cumplir")
+	{var mean="to fulfill; to celebrate a birthday)";}
+else if(ver=="ofrecer")
+	{var mean="to offer, present";}
+else if(ver=="descubrir")
+	{var mean="to discover";}
+else if(ver=="levantar")
+	{var mean="to raise, to lift, to levitate";}
+else if(ver=="intentar")
+	{var mean="to try, to attempt";}
+else if(ver=="usar")
+	{var mean="to use";}
+else if(ver=="decidir")
+	{var mean="to decide";}
+else if(ver=="repetir")
+	{var mean="to repeat";}
+else if(ver=="olvidar")
+	{var mean="to forget";}
+else if(ver=="valer")
+	{var mean="to be worth, cost";}
+else if(ver=="comer")
+	{var mean="to eat";}
+else if(ver=="mostrar")
+	{var mean="to show";}
+else if(ver=="ocupar")
+	{var mean="to occupy, use";}
+else if(ver=="mover")
+	{var mean="to move, to incite";}
+else if(ver=="continuar")
+	{var mean="to continue";}
+else if(ver=="suceder")
+	{var mean="to happen";}
+else if(ver=="fijar")
+	{var mean="to set, fix, fijarse-to notice";}
+else if(ver=="referir")
+	{var mean="to refer";}
+else if(ver=="acercar")
+	{var mean="to come near";}
+else if(ver=="dedicar")
+	{var mean="to dedicate, to devote";}
+else if(ver=="aprender")
+	{var mean="to learn";}
+if(ver=="comprar")
+	{var mean="to buy";}
+else if(ver=="subir")
+	{var mean="to go up";}
+else if(ver=="evitar")
+	{var mean="to avoid, prevent";}
+else if(ver=="interesar")
+	{var mean="to interest";}
+else if(ver=="cerrar")
+	{var mean="to close";}
+else if(ver=="echar")
+	{var mean="to toss, throw, cast";}
+else if(ver=="responder")
+	{var mean="to answer, to respond";}
+else if(ver=="sufrir")
+	{var mean="to suffer, to undergo";}
+else if(ver=="importar")
+	{var mean="to matter, to import";}
+else if(ver=="obtener")
+	{var mean="to obtain, to get";}
+else if(ver=="observar")
+	{var mean="to observe";}
+else if(ver=="indicar")
+	{var mean="to indicate";}
+else if(ver=="imaginar")
+	{var mean="to imagine";}
+else if(ver=="soler")
+	{var mean="to be accustomed to";}
+else if(ver=="detener")
+	{var mean="to stop, to detain";}
+else if(ver=="desarrollar")
+	{var mean="to develop";}
+else if(ver=="senalar")
+	{var mean="to point (out), signal";}
+else if(ver=="elegir")
+	{var mean="to choose, elect";}
+else if(ver=="preparar")
+	{var mean="to prepare";}
+else if(ver=="proponer")
+	{var mean="to propose";}
+else if(ver=="demostrar")
+	{var mean="to show, to demonstrate";}
+else if(ver=="significar")
+	{var mean="to mean";}
+else if(ver=="reunir")
+	{var mean="to gather, to meet, to collect";}
+else if(ver=="faltar")
+	{var mean="to be lacking";}
+else if(ver=="acompañar")
+	{var mean="to occompany";}
+else if(ver=="desear")
+	{var mean="to want, to desire, to wish for";}
+else if(ver=="enseñar")
+	{var mean="to teach, to show";}
+else if(ver=="construir")
+	{var mean="to build, to construct";}
+else if(ver=="vender")
+	{var mean="to sell";}
+else if(ver=="representar")
+	{var mean="to represent";}
+else if(ver=="desaparecer")
+	{var mean="to dissappear, to vanish";}
+else if(ver=="mandar")
+	{var mean="to send, to order";}
+else if(ver=="andar")
+	{var mean="to walk, to function";}
+else if(ver=="preferir")
+	{var mean="to prefer";}
+else if(ver=="asegurar")
+	{var mean="to assure, secure, insure";}
+else if(ver=="crecer")
+	{var mean="to grow, to increase";}
+else if(ver=="surgir")
+	{var mean="to appear, to spring forth, to surge";}
+else if(ver=="matar")
+	{var mean="to kill";}
+else if(ver=="entregar")
+	{var mean="to deliver, to turn in, to hand in";}
+else if(ver=="colocar")
+	{var mean="to place, position, colocate";}
+else if(ver=="establecer")
+	{var mean="to establish";}
+else if(ver=="guardar")
+	{var mean="to keep, to save, to put away";}
+else if(ver=="iniciar")
+	{var mean="to initiate, to start";}
+else if(ver=="bajar")
+	{var mean="to go down, to let down";}
+else if(ver=="notar")
+	{var mean="to notice";}
+else if(ver=="meter")
+	{var mean="to put in, to insert";}
+else if(ver=="actuar")
+	{var mean="to act, to behave";}
+else if(ver=="pretender")
+	{var mean="to attempt";}
+else if(ver=="acordar")
+	{var mean="to remember, to remind";}
+else if(ver=="cortar")
+	{var mean="to cut";}
+else if(ver=="corresponder")
+	{var mean="to correspond with, to correspond to";}
+else if(ver=="romper")
+	{var mean="to break";}
+else if(ver=="adquirir")
+	{var mean="to acquire, to get";}
+else if(ver=="lanzar")
+	{var mean="to throw, to launch";}
+else if(ver=="aprovechar")
+	{var mean="to take advantage of";}
+else if(ver=="apoyar")
+	{var mean="to support, to lean upon";}
+else if(ver=="negar")
+	{var mean="to deny, to refuse";}
+else if(ver=="avanzar")
+	{var mean="to advance, to progress";}
+else if(ver=="resolver")
+	{var mean="to resolve, to settle, to work out";}
+else if(ver=="costar")
+	{var mean="to cost, to be hard";}
+else if(ver=="exigir")
+	{var mean="to demand";}
+else if(ver=="aumentar")
+	{var mean="to increase, to augment";}
+else if(ver=="recoger")
+	{var mean="to pick up, to straighten up";}
+else if(ver=="abandonar")
+	{var mean="to abandon, to leave a place";}
+else if(ver=="imponer")
+	{var mean="to impose, to enforce";}
+else if(ver=="obligar")
+	{var mean="to oblige, to force";}
+else if(ver=="aplicar")
+	{var mean="to apply";}
+else if(ver=="pertenecer")
+	{var mean="to belong";}
+else if(ver=="disponer")
+	{var mean="to have means, to dispose";}
+else if(ver=="expresar")
+	{var mean="to express";}
+else if(ver=="provocar")
+	{var mean="to cause, to provoke";}
+else if(ver=="defender")
+	{var mean="to defend, to protect";}
+else if(ver=="quitar")
+	{var mean="to remove, to take away";}
+else if(ver=="conservar")
+	{var mean="to preserve, to conserve";}
+else if(ver=="depender")
+	{var mean="to depend (upon)";}
+else if(ver=="marcar")
+	{var mean="to mark, to dial";}
+else if(ver=="compartir")
+	{var mean="to share";}
+else if(ver=="consistir")
+	{var mean="to consist of";}
+else if(ver=="constituir")
+	{var mean="to constitute, to consist of";}
+else if(ver=="cubrir")
+	{var mean="to cover";}
+else if(ver=="funcionar")
+	{var mean="to work, to function";}
+else if(ver=="caber")
+	{var mean="to fit";}
+else if(ver=="beber")
+	{var mean="to drink";}
+else if(ver=="atender")
+	{var mean="to serve, to attend to";}
+else if(ver=="insistir")
+	{var mean="to insist on";}
+
+	
+
+			if(ver=="ser"){
+				var mean="to be(permanet)";
+				var fps="soy";
+				var	sps="eres";
+				var tps="es";
+				var fpp="somos";
+				var spp="sois";
+				var tpp="son";
+			}
+
+
+			else if(ver=="estar"){
+				var mean="to be (temporary)";
+				var fps="estoy";
+				var sps="estas";
+				var tps="está";
+				var fpp="estamos";
+				var spp="estáis";
+				var tpp="están";
+			}
+			else if(ver=="oir"){
+				var fps="oigo";
+				var sps="oyes";
+				var tps="oye";
+				var fpp="oímos";
+				var spp="oís";
+				var tpp="oyen";
+			}
+			else if(ver=="jugar"){
+				var fps="juego";
+				var sps="juegas";
+				var tps="juega";
+				var fpp="juegamos";
+				var spp="jugáis";
+				var tpp="juegan";
+			}
+			else if(ver=="haber"){
+				var mean="to have";
+				var fps="he";
+				var sps="has";
+				var tps="ha";
+				var fpp="hemos";
+				var spp="habéis";
+				var tpp="han";
+			}
+
+			else if(ver=="tener"){
+				var mean="to have";
+				var fps="tengo";
+				var sps="tienes";
+				var tps="tiene";
+				var fpp="tenemos";
+				var spp="tenéis";
+				var tpp="tienen";
+			}
+
+			else if(ver=="poder"){
+				var mean="to be able";
+				var fps="puedo";
+				var	sps="puedes";
+				var tps="puede";
+				var fpp="podemos";
+				var spp="podéis";
+				var tpp="pueden";
+			}
+
+			else if(ver=="hacer"){
+				var mean="to do";
+				var fps="hago";
+				var	sps="haces";
+				var tps="hace";
+				var fpp="hacemos";
+				var spp="hacéis";
+				var tpp="hacen";
+			}
+
+			else if(ver=="ir"){
+				var mean="to go";
+				var fps="voy";
+				var	sps="vas";
+				var tps="va";
+				var fpp="vamos";
+				var spp="vais";
+				var tpp="van";
+			}
+
+			else if(ver=="poner"){
+				var mean="to place";
+				var fps="pongo";
+				var	sps="pones";
+				var tps="pone";
+				var fpp="ponemos";
+				var spp="ponéis";
+				var tpp="ponen";
+			}
+
+			else if(ver=="decir"){
+				var mean="to say";
+				var fps="digo";
+				var	sps="dices";
+				var tps="dice";
+				var fpp="decimos";
+				var spp="decís";
+				var tpp="dicen";
+			}
+
+			else if(ver=="ver"){
+				 var mean="to see";
+				var fps="veo";
+				var	sps="ves";
+				var tps="ve";
+				var fpp="vemos";
+				var spp="veis";
+				var tpp="ven";
+			}
+
+			else if(ver=="querer"){
+				var mean="to want";
+				var fps="quiero";
+				var	sps="quieres";
+				var tps="quiere";
+				var fpp="queremos";
+				var spp="queréis";
+				var tpp="quieren";
+			}
+
+			else if(ver=="saber"){
+				var mean="to know/to taste";
+				var fps="sé";
+				var	sps="sabes";
+				var tps="sabe";
+				var fpp="sabemos";
+				var spp="sabéis";
+				var tpp="saben";
+			}
+
+			else if(ver=="llegar"){
+				var mean="to arrive";
+				var fps="llego";
+				var	sps="llegas";
+				var tps="llega";
+				var fpp="llegamos";
+				var spp="llegáis";
+				var tpp="llegan";
+			}
+
+			else if(ver=="creer"){
+				var mean="to think/to believe";
+				var fps="creo";
+				var	sps="crees";
+				var tps="cree";
+				var fpp="creemos";
+				var spp="creéis";
+				var tpp="creen";
+			}
+
+			else if(ver=="encontrar"){
+				 var mean="to find/to meet";
+				var fps="encuentro";
+				var	sps="encuentras";
+				var tps="encuentra";
+				var fpp="encuentra";
+				var spp="encontráis";
+				var tpp="encuentran";
+			}
+
+			else if(ver=="venir"){
+				var mean="to come";
+				var fps="vengo";
+				var	sps="vienes";
+				var tps="viene";
+				var fpp="venimos";
+				var spp="venís";
+				var tpp="vienen";
+			}
+
+			else if(ver=="pensar"){
+				var mean="to think";
+				var fps="pienso";
+				var	sps="piensas";
+				var tps="piensa";
+				var fpp="pensamos";
+				var spp="pensáis";
+				var tpp="piensan";
+			}
+			
+			else if(ver=="conocer"){
+				var mean="to get to know";
+				var fps="conozco";
+				var	sps="conoces";
+				var tps="conoce";
+				var fpp="conocemos";
+				var spp="conocéis";
+				var tpp="conocen";
+			}
+
+			else if(ver=="sentir"){
+				var mean="to feel/to feel sorry";
+				var fps="siento";
+				var	sps="sientes";
+				var tps="siente";
+				var fpp="sentimos";
+				var spp="sentís";
+				var tpp="sienten";
+			}
+
+			else if(ver=="volver"){
+				var mean="to to do again";
+				var fps="vuelvo";
+				var	sps="vuelves";
+				var tps="vuelve";
+				var fpp="volvemos";
+				var spp="volvéis";
+				var tpp="vuelven";
+			}
+
+			else if(ver=="caber"){
+				var mean="to fit";
+				var fps="quepo";
+				var	sps="cabes";
+				var tps="cabe";
+				var fpp="cabemos";
+				var spp="cabéis";
+				var tpp="caben";
+			}
+
+			else if(ver=="caer"){
+				var mean="to fall";
+				var fps="caigo";
+				var	sps="caes";
+				var tps="cae";
+				var fpp="caemos";
+				var spp="caéis";
+				var tpp="caen";
+			}
+
+			else if(ver=="dar"){
+				var mean="to see";
+				var fps="doy";
+				var	sps="das";
+				var tps="da";
+				var fpp="damos";
+				var spp="dais";
+				var tpp="dan";
+			}
+
+			else if(ver=="Ver"){
+			var mean="to see";
+
+				var fps="veo";
+				var	sps="ves";
+				var tps="ve";
+				var fpp="vemos";
+				var spp="veis";
+				var tpp="ven";
+			}
+
+
+			else if(ver=="valer"){
+				var mean="to be worth";
+				var fps="valgo";
+				var	sps="vales";
+				var tps="vale";
+				var fpp="valemos";
+				var spp="valéis";
+				var tpp="valen";
+			}
+
+			else if(ver=="traer"){
+				var mean="to bring";
+				var fps="traigo";
+				var	sps="traes";
+				var tps="trae";
+				var fpp="treamos";
+				var spp="traéis";
+				var tpp="traen";
+			}
+
+
+
+			else if(ver=="salir"){
+				var mean="to leave";
+				var fps="salgo";
+				var	sps="sales";
+				var tps="sale";
+				var fpp="salimos";
+				var spp="salís";
+				var tpp="salen";
+			}
+
+
+
+			else if(ver=="componer"){
+				var mean="to compose";
+				var fps="compongo";
+				var	sps="compones";
+				var tps="compone";
+				var fpp="componemos";
+				var spp="componéis";
+				var tpp="componen";
+			}
+
+
+
+			else if(ver=="disponer"){
+				var fps="dispongo";
+				var	sps="dispones";
+				var tps="dispone";
+				var fpp="disponemos";
+				var spp="disponéis";
+				var tpp="disponen";
+			}
+
+
+			else if(ver=="proponer"){
+				var mean="to propose";
+				var fps="propongo";
+				var	sps="propones";
+				var tps="propone";
+				var fpp="proponemos";
+				var spp="proponéis";
+				var tpp="proponen";
+			}
+
+
+			else if(ver=="reponer"){
+				var mean="to replace";
+				var fps="repongo";
+				var	sps="repones";
+				var tps="repone";
+				var fpp="reponemos";
+				var spp="reponéis";
+				var tpp="reponen";
+			}
+
+
+
+
+			else if(ver=="deshacer"){
+				var mean="to undo";
+				var fps="deshago";
+				var	sps="deshaces";
+				var tps="deshace";
+				var fpp="deshacemos";
+				var spp="deshacéis";
+				var tpp="deshacen";
+			}
+
+
+			else if(ver=="rehacer"){
+				var mean="to remake";
+				var fps="rehago";
+				var	sps="rehaces";
+				var tps="rehace";
+				var fpp="rehacemos";
+				var spp="rehacéis";
+				var tpp="rehacen";
+			}
+
+
+
+
+			else if(ver=="conocer"){
+				var fps="conozco";
+				var	sps="conoces";
+				var tps="conoce";
+				var fpp="conocemos";
+				var spp="conocéis";
+				var tpp="conocen";
+			}
+
+			else if(ver=="agradecer"){
+				var mean="to thank, to be grateful";
+				var fps="agradezco";
+				var	sps="agradeces";
+				var tps="agradece";
+				var fpp="agradecemos";
+				var spp="agradecéis";
+				var tpp="agradecen";
+			}
+
+			else if(ver=="aparecer"){
+				var mean="to appear";
+				var fps="aparezco";
+				var	sps="apareces";
+				var tps="aparece";
+				var fpp="aparecemos";
+				var spp="aparecéis";
+				var tpp="aparecen";
+			}
+
+			else if(ver=="ofrecer"){
+				var mean="to offer";
+				var fps="ofrezco";
+				var	sps="ofreces";
+				var tps="ofrece";
+				var fpp="ofrecemos";
+				var spp="ofrecéis";
+				var tpp="ofrecen";
+			}
+
+			else if(ver=="permanecer"){
+				var mean="to remain";
+				var fps="permanezco";
+				var	sps="permaneces";
+				var tps="permanece";
+				var fpp="permanecemos";
+				var spp="permanecéis";
+				var tpp="permanecen";
+			}
+
+			else if(ver=="pertenecer"){
+				var mean="to belong to";
+				var fps="pertenezco";
+				var	sps="perteneces";
+				var tps="pertenece";
+				var fpp="pertenecemos";
+				var spp="pertenecéis";
+				var tpp="pertenecen";
+			}
+
+			else if(ver=="traducir"){
+				var mean="to translate";
+				var fps="traduzco";
+				var	sps="traduces";
+				var tps="traduce";
+				var fpp="traducimos";
+				var spp="traducis";
+				var tpp="traducen";
+			}
+
+
+			else if(ver=="conducir"){
+				var mean="to drive";
+				var fps="conduzco";
+				var	sps="conduces";
+				var tps="conduce";
+				var fpp="conducimos";
+				var spp="conducis";
+				var tpp="conducen";
+			}
+
+
+			else if(ver=="producir"){
+				var mean="to produce";
+				var fps="produzco";
+				var	sps="produces";
+				var tps="produce";
+				var fpp="producimos";
+				var spp="producís";
+				var tpp="producen";
+			}
+
+
+
+			else if(ver=="andar"){
+				var mean="to walk";
+				var fps="anduve";
+				var	sps="anduviste";
+				var tps="anduvo";
+				var fpp="anduvimos";
+				var spp="anduvisteis";
+				var tpp="anduvieron";
+			}
+
+			else if(ver=="traducir"){
+				var mean="to translate";
+				var fps="traduzco";
+				var	sps="traduces";
+				var tps="traduce";
+				var fpp="traducimos";
+				var spp="traducis";
+				var tpp="traducen";
+			}
+
+			else{
+
+				if (type=="er") {
+				var fps=stem.concat("o");
+				var	sps=stem.concat("es");
+				var tps=stem.concat("e");
+				var fpp=stem.concat("emos");
+				var spp=stem.concat("eis");
+				var tpp=stem.concat("en");
+			}
+
+			else if(type=="ar"){
+				var fps=stem.concat("o");
+				var	sps=stem.concat("as");
+				var tps=stem.concat("a");
+				var fpp=stem.concat("amos");
+				var spp=stem.concat("ais");
+				var tpp=stem.concat("an");
+			}
+
+			else if(type=="ir")
+			{
+				var fps=stem.concat("o");
+				var	sps=stem.concat("es");
+				var tps=stem.concat("e");
+				var fpp=stem.concat("imos");
+				var spp=stem.concat("is");
+				var tpp=stem.concat("en");
+			}
+			
+			}
+			if(ver.length==2){
+				stem=ver;
+			}
+			document.getElementById("meaning").value = mean;
+			//document.getElementById("stem").value = stem;
+			document.getElementById("yo").value = fps;
+			document.getElementById("tu").value = sps;
+			document.getElementById("ella").value = tps;
+			document.getElementById("nos").value = fpp;
+			document.getElementById("vos").value = spp;
+			document.getElementById("ellos").value = tpp;
+			
+		}
+	</script>
+</head>
+<body>
+	<p id="hi"></p>
+	<center><h1>Conjucation of infinite verbs in Spanish</h1></center>
+<center>
+	<form>
+		<table>
+		<tr>
+			<td><h2 id="gt">Input the infinite verb&nbsp</h2></td>
+				<td><input type="text" id="verbo" required/></td>
+		</tr>
+
+		<tr align="center">
+			<td colspan="2"><button onclick="conj()" type="button">Conjugate</button></td>
+		</tr>
+		</table>
+	</form>
+
+
+<div id="tab1">
+	<table id="tab">
+		<tr>
+			<td class="hgg">Meaning</td>
+			<td><input type="text" id="meaning" size="40" class="input"></td>
+		</tr>
+
+
+		<tr>
+			<td class="hgg">yo</td>
+			<td><input type="text" id="yo" size="40" class="input"></td>		
+	</tr>
+
+		<tr>
+			<td class="hgg">tú </td>
+			<td><input type="text" id="tu" size="40" class="input"></td>		
+	</tr>
+
+		<tr>
+			<td class="hgg">él/ella/Ud</td>
+			<td><input type="text" id="ella" size="40" class="input"></td>		
+	</tr>
+
+		<tr>
+			<td class="hgg">nosotros</td>
+			<td><input type="text" id="nos" size="40" class="input"></td>		
+	</tr>
+
+		<tr>
+			<td class="hgg">vosotros</td>
+			<td><input type="text" id="vos" size="40" class="input"></td>		
+	</tr>
+
+		<tr>
+			<td class="hgg">ellos/ellas/Uds</td>
+			<td><input type="text" id="ellos" size="40" class="input"></td>		
+</tr>
+	</table>
+</div>
+</center>
+<center><h2><a href="numbers.html" style="color: white;">Click here to convert numbers to Spanish</a></h2></center>
+</body>
+
+
+</html>
